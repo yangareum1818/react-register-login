@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.auth_btn {
+  padding: 12px 24px;
+  color: #17ce5f;
+  background: #fff;
+  border: 1px solid #17ce5f;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.25s ease-in;
+}
+.auth_btn:hover {
+    color: #fff;
+    background: #17ce5f;
+    border: 1px solid #17ce5f;
 }
