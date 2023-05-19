@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+
+import { Provider } from "react-redux";
+import { store } from "./modules/store";
 
 const AppContainer = styled.div`
   display: flex;
@@ -16,11 +19,13 @@ const AppContainer = styled.div`
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AppContainer>
-        <App />
-      </AppContainer>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <AppContainer>
+          <App />
+        </AppContainer>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
